@@ -1,6 +1,6 @@
 import prompt_sync from "prompt-sync";
 import { menu ,menuAgregar, menuMostrar, menuEditar, menuBorrar } from "./opcionesMenu.js";
-
+import {selecionMostrar  } from "./selecionesMenu.js";
 const prompt = prompt_sync();
 
 menu();
@@ -17,7 +17,8 @@ function seleccionMenu(opcion) {
 
                 menuMostrar();
                 const eleccionMostrar = Number(prompt("Ingrese una opcion"));
-                opcionesMostrar(eleccionMostrar);
+                selecionMostrar(eleccionMostrar);
+                menu();
             break;
 
             case 2:

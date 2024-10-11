@@ -1,4 +1,4 @@
-import { agregarElemento,mostarElemento,editarElemento,borrarElemento } from "./manejador_arreglo";
+
 const menu = () => {
 
     console.log("1)Mostrar elementos");    

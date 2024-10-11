@@ -1,9 +1,10 @@
 
-function agregarElemento(elem, arreglo) {
-    arreglo.push(elem);
+function agregarElemento(arreglo) {
+    arreglo.push();
     
 }
-function mostarElemento(params) {
+function mostarElemento(arreglo) {
+    console.log(arreglo);
     
 }
 
