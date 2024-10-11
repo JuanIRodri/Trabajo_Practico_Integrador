@@ -1,7 +1,5 @@
 import prompt_sync from "prompt-sync";
-import { agregarElemento } from "./manejador_arreglo.js"
-import { autos,camionetas,motos } from "./registroVehiculos.js";
-import { menu ,menu2 } from "./opcionesMenu.js";
+import { menu ,menuAgregar, menuMostrar, menuEditar, menuBorrar } from "./opcionesMenu.js";
 
 const prompt = prompt_sync();
 
@@ -17,29 +15,24 @@ function seleccionMenu(opcion) {
 
             case 1:
 
-                console.log("--------Autos---------");                
-                console.log(autos);
-
-                console.log("--------Camionetas---------");
-                console.log(camionetas);
-
-                console.log("--------Motos---------");
-                console.log(motos);
-                
+                menuMostrar();
+                const eleccionMostrar = Number(prompt("Ingrese una opcion"));
+                opcionesMostrar(eleccionMostrar);
             break;
 
             case 2:
 
-                menu2();                
+                menuAgregar();                
 
             break;
 
             case 3:
 
-                console.log("hola desde opcion 3");
-
+                menuEditar();
             break;
-
+            case 4:
+                menuBorrar();
+            break;
             default:
             
             if (opcion != 0) {
