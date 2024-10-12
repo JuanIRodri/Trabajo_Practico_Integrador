@@ -1,11 +1,14 @@
 import prompt_sync from "prompt-sync";
-import { menu ,menuAgregar, menuMostrar, menuEditar, menuBorrar } from "./opcionesMenu.js";
-import {selecionMostrar  } from "./selecionesMenu.js";
+import { menu ,menuMostrar} from "./opcionesMenu.js";
+import { seleccionMostrar,volverAlMenu  } from "./seleccionesMenu.js";
 const prompt = prompt_sync();
 
-menu();
+
 
 function seleccionMenu(opcion) {
+
+    console.clear();
+    menu();
 
     while (opcion != 0) {
         
@@ -15,23 +18,38 @@ function seleccionMenu(opcion) {
 
             case 1:
 
+                console.log("¿Qué tipo de vehiculo desea ver?");
                 menuMostrar();
-                const eleccionMostrar = Number(prompt("Ingrese una opcion"));
-                selecionMostrar(eleccionMostrar);
-                menu();
+                const eleccionMostrar = Number(prompt("Ingrese una opcion: "));
+                seleccionMostrar(eleccionMostrar);               
+                opcion = volverAlMenu();
+                
             break;
 
             case 2:
 
+                console.log("¿Qué tipo de vehiculo desea agregar?");
+                menuMostrar();
+
+                opcion = volverAlMenu();
                 menuAgregar();                
 
             break;
 
             case 3:
 
+                console.log("¿Qué tipo de vehiculo desea editar?");
+                menuMostrar();
+
+                opcion = volverAlMenu();
                 menuEditar();
+
             break;
             case 4:
+                console.log("¿Qué tipo de vehiculo desea borrar?");
+                menuMostrar();
+
+                opcion = volverAlMenu();
                 menuBorrar();
             break;
             default:

@@ -9,13 +9,12 @@ const menu = () => {
 
 }
 const menuMostrar = () =>{
-    console.log("¿Qué tipo de vehiculo desea ver?");
     console.log("1)Para ver los autos");
     console.log("2)Para ver las camionetas");
     console.log("3)Para ver las motos");
 }
 
-const menuAgregar= () => {
+const menuOpcionesVehiculos= () => {
 
     console.log("¿Que desea agregar?");    
     console.log("1)Para agregar una moto");
@@ -43,4 +42,4 @@ const menuBorrar = () =>{
 }
 
 
-export { menu , menuAgregar, menuEditar, menuMostrar, menuBorrar};
+export { menu , menuOpcionesVehiculos, menuEditar, menuMostrar, menuBorrar};

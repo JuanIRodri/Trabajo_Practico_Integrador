@@ -1,5 +1,6 @@
 const autos = [
     {
+        id: 1,
         placa: "ABC-1234",
         marca: "Toyota",
         modelo: "Corolla",
@@ -7,9 +8,10 @@ const autos = [
         tipoVehiculo: "Auto",        
         horaEntrada: "2024-10-11T08:30:00",
         horaSalida: "2024-10-11T10:30:00",
-        costo: 5.00
+        costo: 3000
     },
     {
+        id:2,
         placa: "JKL-1357",
         marca: "Chevrolet",
         modelo: "Cruze",
@@ -17,12 +19,13 @@ const autos = [
         tipoVehiculo: "Auto",
         horaEntrada: "2024-10-11T08:15:00",
         horaSalida: "2024-10-11T11:15:00",
-        costo: 6.00
+        costo: 6000
     }
 ];
 
 const camionetas = [
     {
+        id:1 ,
         placa: "LMN-2468",
         marca: "Ford",
         modelo: "Ranger",
@@ -30,12 +33,13 @@ const camionetas = [
         tipoVehiculo: "Camioneta",
         horaEntrada: "2024-10-11T07:45:00",
         horaSalida: "2024-10-11T09:45:00",
-        costo: 4.50
+        costo: 4500
     }
 ];
 
 const motos = [
     {
+        id:1,
         placa: "XYZ-5678",
         marca: "Honda",
         modelo: "CBR500R",
@@ -43,7 +47,7 @@ const motos = [
         tipoVehiculo: "Moto",
         horaEntrada: "2024-10-11T09:00:00",
         horaSalida: "2024-10-11T12:00:00",
-        costo: 7.50
+        costo: 2000
     }
 ];
 
