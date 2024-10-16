@@ -1,16 +1,26 @@
 
 function agregarElemento(arreglo) {
-    arreglo.push();
+    arreglo.push(arreglo);
     
 }
 function mostarElemento(arreglo) {
-    console.log(arreglo);
+    console.table(arreglo);
     
 }
 
-function editarElemento(params) {
+function editarElemento(id,arreglo) {
     
+   for (let i = 0; i < arreglo.length; i++) {
+        if (arreglo[i] == id) {
+
+
+            
+        }
+   }
+
 }
+
+
 function borrarElemento(params) {
     
 }

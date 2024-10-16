@@ -8,22 +8,17 @@ const menu = () => {
     console.log("0)Para salir del programa");
 
 }
-const menuMostrar = () =>{
-    console.log("1)Para ver los autos");
-    console.log("2)Para ver las camionetas");
-    console.log("3)Para ver las motos");
-}
 
 const menuOpcionesVehiculos= () => {
-
-    console.log("¿Que desea agregar?");    
-    console.log("1)Para agregar una moto");
-    console.log("2)Para agregar un auto");
-    console.log("3)Para agregar una camioneta");
+  
+    console.log("1)Para moto");
+    console.log("2)Para auto");
+    console.log("3)Para camioneta");
 
 }
 
 const menuEditar = () =>{
+
     console.log("¿Que desea actualizar?");    
     console.log("1)Para actualizar la marca de un vehiculo");
     console.log("2)Para actualizar el modelo de un vehiculo");
@@ -36,10 +31,6 @@ const menuEditar = () =>{
 
 }
 
-const menuBorrar = () =>{
-
-    
-}
 
 
-export { menu , menuOpcionesVehiculos, menuEditar, menuMostrar, menuBorrar};
+export { menu , menuOpcionesVehiculos, menuEditar};

@@ -1,20 +1,19 @@
-import { agregarElemento,mostarElemento,editarElemento,borrarElemento } from "./manejador_arreglo.js";
 import { autos,motos,camionetas } from "./registroVehiculos.js";
 import { seleccionMenu} from "./menu.js";
 import prompt_sync from "prompt-sync";
 const prompt = prompt_sync();
 
-function seleccionMostrar(eleccion) {
+function seleccionMostrar(eleccion,funcion) {
     
     switch (eleccion) {
         case 1:
-            mostarElemento(autos);
+            funcion(autos);
         break;
         case 2:
-            mostarElemento(camionetas);
+            funcion(camionetas);
         break;
         case 1:
-            mostarElemento(motos);
+            funcion(motos);
         break;
     
         default:
