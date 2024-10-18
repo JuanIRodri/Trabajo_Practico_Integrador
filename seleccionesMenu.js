@@ -3,17 +3,17 @@ import { seleccionMenu} from "./menu.js";
 import prompt_sync from "prompt-sync";
 const prompt = prompt_sync();
 
-function seleccionMostrar(eleccion,funcion) {
+function seleccionMostrar(eleccion,mostrar) {
     
     switch (eleccion) {
         case 1:
-            funcion(autos);
+            mostrar(motos);
         break;
         case 2:
-            funcion(camionetas);
+            mostrar(autos);
         break;
         case 1:
-            funcion(motos);
+            mostrar(camionetas);
         break;
     
         default:
@@ -22,6 +22,7 @@ function seleccionMostrar(eleccion,funcion) {
     }
 
 }
+
 
 function volverAlMenu() {
 
@@ -35,11 +36,8 @@ function volverAlMenu() {
         seleccionMenu();
 
     }else{
-
-        return 0;
-
+        opcion = 0;
     }
-
 }
 
 

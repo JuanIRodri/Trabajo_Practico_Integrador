@@ -1,6 +1,6 @@
-const autos = [
+let autos = [
     {
-        id: 1,
+        id:1,
         placa: "ABC-1234",
         marca: "Toyota",
         modelo: "Corolla",
@@ -23,9 +23,9 @@ const autos = [
     }
 ];
 
-const camionetas = [
+let camionetas = [
     {
-        id:1 ,
+        id:1,
         placa: "LMN-2468",
         marca: "Ford",
         modelo: "Ranger",
@@ -37,7 +37,7 @@ const camionetas = [
     }
 ];
 
-const motos = [
+let motos = [
     {
         id:1,
         placa: "XYZ-5678",

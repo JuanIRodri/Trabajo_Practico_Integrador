@@ -1,18 +1,19 @@
 import prompt_sync from "prompt-sync";
-import { menu , menuOpcionesVehiculos} from "./opcionesMenu.js";
+import { menu , menuOpcionesVehiculos, menuEditar} from "./opcionesMenu.js";
 import { seleccionMostrar,volverAlMenu  } from "./seleccionesMenu.js";
-import { agregarElemento,mostarElemento,editarElemento,borrarElemento } from "./manejador_arreglo.js";
+import { agregarElemento,mostarElemento,borrarElemento } from "./manejador_arreglo.js";
+import { seleccionEditar } from "./editarElemento.js";
 const prompt = prompt_sync();
 
 
 
 function seleccionMenu(opcion) {
-
+    
     console.clear();
     menu();
-
+    let eleccion = 0;
     while (opcion != 0) {
-        let eleccion = 0;
+        
         
         opcion = Number(prompt("Ingrese una opcion: "));
 
@@ -43,19 +44,23 @@ function seleccionMenu(opcion) {
 
                 console.log("¿Qué tipo de vehiculo desea editar?");
                 menuOpcionesVehiculos();
-                eleccion = Number(prompt("Ingrese una opcion: "));
-                seleccionMostrar(eleccion,editarElemento);  
-                opcion = volverAlMenu();
+                let eleccionVehiculo = Number(prompt("Ingrese una opcion: "));
                 menuEditar();
+                let eleccionElemento = Number(prompt("Ingrese una opcion: "));
+                seleccionEditar(eleccionVehiculo,2,eleccionElemento,1000);  
+                opcion = volverAlMenu();
+                
 
             break;
             case 4:
+
                 console.log("¿Qué tipo de vehiculo desea borrar?");
                 menuOpcionesVehiculos();
                 eleccion = Number(prompt("Ingrese una opcion: "));
                 seleccionMostrar(eleccion,borrarElemento);  
                 opcion = volverAlMenu();
                 menuBorrar();
+
             break;
             default:
             
@@ -73,4 +78,4 @@ function seleccionMenu(opcion) {
     
 }
 
-export { seleccionMenu };
+export { seleccionMenu};
