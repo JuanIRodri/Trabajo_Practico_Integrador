@@ -30,8 +30,6 @@ function seleccionPropiedad(propiedad) {
             return "modelo";
         case 4:
             return "lugarDeEstacionamiento";
-        case 5:
-            return "tipoVehiculo";
         case 6:
             return "horaEntrada";
         case 7:
@@ -54,8 +52,6 @@ function editarElemento(id, arreglo, propiedad, nuevoValor) {
             }
         }
     }
-    console.log( `No se encontró el objeto con id ${id}`);
-
 }
 
 export { seleccionEditar }

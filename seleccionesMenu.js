@@ -1,31 +1,9 @@
-import { autos,motos,camionetas } from "./registroVehiculos.js";
 import { seleccionMenu} from "./menu.js";
 import prompt_sync from "prompt-sync";
 const prompt = prompt_sync();
 
-function seleccionMostrar(eleccion,mostrar) {
-    
-    switch (eleccion) {
-        case 1:
-            mostrar(motos);
-        break;
-        case 2:
-            mostrar(autos);
-        break;
-        case 1:
-            mostrar(camionetas);
-        break;
-    
-        default:
-            
-        break;
-    }
-
-}
-
-
 function volverAlMenu() {
-
+    let opcion = 1;
     console.log("¿Desea volver al menu?");
     console.log("1)Para volver al menu");
     console.log("0)Para salir de la aplicacion");
@@ -33,7 +11,7 @@ function volverAlMenu() {
     
     if (eleccion == 1) {
         console.clear();
-        seleccionMenu();
+        seleccionMenu(opcion);
 
     }else{
         opcion = 0;
@@ -43,4 +21,4 @@ function volverAlMenu() {
 
 
 
-export { seleccionMostrar, volverAlMenu };
+export { volverAlMenu };

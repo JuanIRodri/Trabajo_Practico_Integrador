@@ -1,8 +1,9 @@
 import prompt_sync from "prompt-sync";
 import { menu , menuOpcionesVehiculos, menuEditar} from "./opcionesMenu.js";
-import { seleccionMostrar,volverAlMenu  } from "./seleccionesMenu.js";
-import { agregarElemento,mostarElemento,borrarElemento } from "./manejador_arreglo.js";
+import { volverAlMenu  } from "./seleccionesMenu.js";
+import { seleccionMostrar } from "./mostrarElemento.js";
 import { seleccionEditar } from "./editarElemento.js";
+import { seleccionVehiculoAgregar } from "./agregarElementos.js";
 const prompt = prompt_sync();
 
 
@@ -24,7 +25,7 @@ function seleccionMenu(opcion) {
                 console.log("¿Qué tipo de vehiculo desea ver?");
                 menuOpcionesVehiculos();
                 eleccion = Number(prompt("Ingrese una opcion: "));
-                seleccionMostrar(eleccion,mostarElemento);               
+                seleccionMostrar(eleccion);               
                 opcion = volverAlMenu();
                 
             break;
@@ -34,7 +35,7 @@ function seleccionMenu(opcion) {
                 console.log("¿Qué tipo de vehiculo desea agregar?");
                 menuOpcionesVehiculos();
                 eleccion = Number(prompt("Ingrese una opcion: "));
-                seleccionMostrar(eleccion,agregarElemento);     
+                seleccionVehiculoAgregar(eleccion);   
                 opcion = volverAlMenu();
                 menuAgregar();                
 
@@ -45,9 +46,14 @@ function seleccionMenu(opcion) {
                 console.log("¿Qué tipo de vehiculo desea editar?");
                 menuOpcionesVehiculos();
                 let eleccionVehiculo = Number(prompt("Ingrese una opcion: "));
+                seleccionMostrar(eleccionVehiculo);
+                console.log("Seleccione la id a editar");
+                let id=Number(prompt("ID: "));
                 menuEditar();
                 let eleccionElemento = Number(prompt("Ingrese una opcion: "));
-                seleccionEditar(eleccionVehiculo,2,eleccionElemento,1000);  
+                console.log("Ingrese un nuevo valor");
+                let nuevoValor = prompt("Nuevo valor: ");
+                seleccionEditar(eleccionVehiculo,id,eleccionElemento,nuevoValor);  
                 opcion = volverAlMenu();
                 
 
