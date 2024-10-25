@@ -3,6 +3,7 @@ import { menu , menuOpcionesVehiculos, menuEditar} from "./opcionesMenu.js";
 import { volverAlMenu  } from "./seleccionesMenu.js";
 import { seleccionMostrar } from "./mostrarElemento.js";
 import { seleccionEditar } from "./editarElemento.js";
+import {seleccionVehiculoBorrar} from "./borrarElementos.js";
 import { seleccionVehiculoAgregar } from "./agregarElementos.js";
 const prompt = prompt_sync();
 
@@ -63,9 +64,8 @@ function seleccionMenu(opcion) {
                 console.log("¿Qué tipo de vehiculo desea borrar?");
                 menuOpcionesVehiculos();
                 eleccion = Number(prompt("Ingrese una opcion: "));
-                seleccionMostrar(eleccion,borrarElemento);  
+                seleccionVehiculoBorrar(eleccion);  
                 opcion = volverAlMenu();
-                menuBorrar();
 
             break;
             default:
