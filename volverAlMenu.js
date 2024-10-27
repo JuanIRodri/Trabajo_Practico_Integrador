@@ -3,7 +3,6 @@ import prompt_sync from "prompt-sync";
 const prompt = prompt_sync();
 
 function volverAlMenu() {
-    let opcion = 1;
     console.log("¿Desea volver al menu?");
     console.log("1)Para volver al menu");
     console.log("0)Para salir de la aplicacion");
@@ -11,10 +10,10 @@ function volverAlMenu() {
     
     if (eleccion == 1) {
         console.clear();
-        seleccionMenu(opcion);
+        seleccionMenu(1);
 
     }else{
-        opcion = 0;
+        seleccionMenu(0);
     }
 }
 
